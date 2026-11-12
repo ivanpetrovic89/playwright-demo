@@ -4,7 +4,13 @@
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
-    "typecheck": "tsc --noEmit"},
+    "test:chrome": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -12,6 +18,8 @@
   "devDependencies": {
     "@playwright/test": "^1.65.0",
     "@types/node": "^26.6.6",
+    "dotenv": "^18.0.10",
+    "prettier": "^3.9.10",
     "typescript": "^7.0.2"
   }
 }
